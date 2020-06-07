@@ -1,0 +1,25 @@
+23:12:28 **** Build of configuration Debug for project xiicps_selftest_example_1 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/xiicps_selftest_example.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xiicps_selftest_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/ravim/OneDrive/Desktop/Vitis/Zynq_Alone/export/Zynq_Alone/sw/Zynq_Alone/standalone_domain/bspinclude/include -MMD -MP -MF"src/xiicps_selftest_example.d" -MT"src/xiicps_selftest_example.o" -o "src/xiicps_selftest_example.o" "../src/xiicps_selftest_example.c"
+'Finished building: ../src/xiicps_selftest_example.c'
+' '
+'Building target: xiicps_selftest_example_1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/ravim/OneDrive/Desktop/Vitis/Zynq_Alone/export/Zynq_Alone/sw/Zynq_Alone/standalone_domain/bsplib/lib -o "xiicps_selftest_example_1.elf"  ./src/xiicps_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: xiicps_selftest_example_1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size xiicps_selftest_example_1.elf  |tee "xiicps_selftest_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31460	   1560	  23336	  56356	   dc24	xiicps_selftest_example_1.elf
+'Finished building: xiicps_selftest_example_1.elf.size'
+' '
+
+23:12:29 Build Finished (took 1s.51ms)
+

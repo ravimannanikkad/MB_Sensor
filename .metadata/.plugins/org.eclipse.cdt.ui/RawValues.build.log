@@ -1,0 +1,34 @@
+01:44:30 **** Incremental Build of configuration Debug for project RawValues ****
+make all 
+'Building file: ../src/IMU_raw.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/IMU_raw.o" -IC:/Users/ravim/OneDrive/Desktop/Vitis/TestBed_IMU/export/TestBed_IMU/sw/TestBed_IMU/standalone_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/IMU_raw.d" -MT"src/IMU_raw.o" -o "src/IMU_raw.o" "../src/IMU_raw.c"
+In file included from ../src/IMU_raw.c:12:
+../src/i2cCustom.h:218:12: warning: 'SetupInterruptSystem' declared 'static' but never defined [-Wunused-function]
+ static int SetupInterruptSystem(XIic *IicInstPtr);
+            ^~~~~~~~~~~~~~~~~~~~
+../src/i2cCustom.h:219:13: warning: 'SendHandler' declared 'static' but never defined [-Wunused-function]
+ static void SendHandler(XIic *InstancePtr);
+             ^~~~~~~~~~~
+../src/i2cCustom.h:220:13: warning: 'ReceiveHandler' declared 'static' but never defined [-Wunused-function]
+ static void ReceiveHandler(XIic *InstancePtr);
+             ^~~~~~~~~~~~~~
+../src/i2cCustom.h:221:13: warning: 'StatusHandler' declared 'static' but never defined [-Wunused-function]
+ static void StatusHandler(XIic *InstancePtr, int Event);
+             ^~~~~~~~~~~~~
+'Finished building: ../src/IMU_raw.c'
+' '
+'Building target: RawValues.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/ravim/OneDrive/Desktop/Vitis/TestBed_IMU/export/TestBed_IMU/sw/TestBed_IMU/standalone_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "RawValues.elf"  ./src/IMU_raw.o ./src/i2cCustom.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: RawValues.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size RawValues.elf  |tee "RawValues.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20332	    752	   3372	  24456	   5f88	RawValues.elf
+'Finished building: RawValues.elf.size'
+' '
+
+01:44:31 Build Finished (took 503ms)
+

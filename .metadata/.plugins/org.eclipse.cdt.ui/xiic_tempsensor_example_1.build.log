@@ -1,0 +1,29 @@
+07:25:08 **** Incremental Build of configuration Debug for project xiic_tempsensor_example_1 ****
+make all 
+'Building file: ../src/xiic_tempsensor_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xiic_tempsensor_example.o" -IC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xiic_tempsensor_example.d" -MT"src/xiic_tempsensor_example.o" -o "src/xiic_tempsensor_example.o" "../src/xiic_tempsensor_example.c"
+../src/xiic_tempsensor_example.c: In function 'TempSensorExample':
+../src/xiic_tempsensor_example.c:244:29: warning: passing argument 2 of 'XIic_MasterSend' makes pointer from integer without a cast [-Wint-conversion]
+  (void)XIic_MasterSend(&Iic,ravi, 1);
+                             ^~~~
+In file included from ../src/xiic_tempsensor_example.c:64:
+C:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bspinclude/include/xiic.h:557:44: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'u8' {aka 'unsigned char'}
+ int XIic_MasterSend(XIic *InstancePtr, u8 *TxMsgPtr, int ByteCount);
+                                        ~~~~^~~~~~~~
+'Finished building: ../src/xiic_tempsensor_example.c'
+' '
+'Building target: xiic_tempsensor_example_1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "xiic_tempsensor_example_1.elf"  ./src/xiic_tempsensor_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: xiic_tempsensor_example_1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size xiic_tempsensor_example_1.elf  |tee "xiic_tempsensor_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14096	    832	   3376	  18304	   4780	xiic_tempsensor_example_1.elf
+'Finished building: xiic_tempsensor_example_1.elf.size'
+' '
+
+07:25:08 Build Finished (took 576ms)
+

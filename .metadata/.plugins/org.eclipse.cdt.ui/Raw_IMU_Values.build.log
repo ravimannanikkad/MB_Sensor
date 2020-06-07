@@ -1,0 +1,34 @@
+11:22:12 **** Incremental Build of configuration Debug for project Raw_IMU_Values ****
+make all 
+'Building file: ../src/IMU_raw.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/IMU_raw.o" -IC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sensor/export/MB_Sensor/sw/MB_Sensor/standalone_domain/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/IMU_raw.d" -MT"src/IMU_raw.o" -o "src/IMU_raw.o" "../src/IMU_raw.c"
+In file included from ../src/IMU_raw.c:10:
+../src/i2cCustom.h:218:12: warning: 'SetupInterruptSystem' declared 'static' but never defined [-Wunused-function]
+ static int SetupInterruptSystem(XIic *IicInstPtr);
+            ^~~~~~~~~~~~~~~~~~~~
+../src/i2cCustom.h:219:13: warning: 'SendHandler' declared 'static' but never defined [-Wunused-function]
+ static void SendHandler(XIic *InstancePtr);
+             ^~~~~~~~~~~
+../src/i2cCustom.h:220:13: warning: 'ReceiveHandler' declared 'static' but never defined [-Wunused-function]
+ static void ReceiveHandler(XIic *InstancePtr);
+             ^~~~~~~~~~~~~~
+../src/i2cCustom.h:221:13: warning: 'StatusHandler' declared 'static' but never defined [-Wunused-function]
+ static void StatusHandler(XIic *InstancePtr, int Event);
+             ^~~~~~~~~~~~~
+'Finished building: ../src/IMU_raw.c'
+' '
+'Building target: Raw_IMU_Values.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sensor/export/MB_Sensor/sw/MB_Sensor/standalone_domain/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Raw_IMU_Values.elf"  ./src/IMU_raw.o ./src/i2cCustom.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Raw_IMU_Values.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Raw_IMU_Values.elf  |tee "Raw_IMU_Values.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19160	    808	   3368	  23336	   5b28	Raw_IMU_Values.elf
+'Finished building: Raw_IMU_Values.elf.size'
+' '
+
+11:22:13 Build Finished (took 844ms)
+

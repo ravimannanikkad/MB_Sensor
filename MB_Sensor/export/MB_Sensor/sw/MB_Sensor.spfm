@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdx:platform sdx:vendor="xilinx.com"
+              sdx:library="sdx"
+              sdx:name="MB_Sensor"
+              sdx:version="1.0"
+              sdx:schemaVersion="1.0"
+              xmlns:sdx="http://www.xilinx.com/sdx">
+    <sdx:description>
+MB_Sensor
+    </sdx:description>
+    <sdx:systemConfigurations sdx:defaultConfiguration="MB_Sensor">
+        <sdx:configuration sdx:name="MB_Sensor"
+                           sdx:displayName="MB_Sensor"
+                           sdx:defaultProcessorGroup="standalone_domain"
+                           sdx:runtimes="cpp">
+            <sdx:description>MB_Sensor</sdx:description>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif="MB_Sensor/boot/MB_Sensor.bif"
+                            sdx:readme="MB_Sensor/boot/generic.readme"
+                            sdx:qemuArguments="MB_Sensor/qemu/qemu_args.txt"
+                            />
+                <sdx:image sdx:name="standalone_domain"
+                            sdx:bif="MB_Sensor/boot/MB_Sensor.bif"
+                            sdx:readme="MB_Sensor/boot/generic.readme"
+                            sdx:qemuArguments="MB_Sensor/standalone_domain/qemu/qemu_args.txt"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="standalone_domain"
+                                sdx:displayName="standalone on microblaze_0"
+                                sdx:cpuType="microblaze_0"
+                                sdx:cpuInstance="microblaze_0">
+                <sdx:os sdx:name="standalone"
+                        sdx:displayName="standalone"
+                        sdx:bspLibraryPaths="MB_Sensor/standalone_domain/bsplib/lib"
+                        sdx:bspIncludePaths="MB_Sensor/standalone_domain/bspinclude/include"
+                        sdx:bspConfig="MB_Sensor/standalone_domain/system.mss"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+    </sdx:systemConfigurations>
+</sdx:platform>

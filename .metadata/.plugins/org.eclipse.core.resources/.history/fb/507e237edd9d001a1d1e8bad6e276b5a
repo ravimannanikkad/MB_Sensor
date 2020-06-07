@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="xuartps_hello_world_example_1" location="C:/Users/ravim/OneDrive/Desktop/Vitis/xuartps_hello_world_example_1" platform="C:/Users/ravim/OneDrive/Desktop/Vitis/PS_Test/export/PS_Test/PS_Test.xpfm" platformUID="xilinx:cora-z7-10::0.0(custom)" systemProject="system_bsp_example_1" sysConfig="PS_Test" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="54d6195f501f5013e765f89f56d6bec3">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.719635735" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.626019367" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

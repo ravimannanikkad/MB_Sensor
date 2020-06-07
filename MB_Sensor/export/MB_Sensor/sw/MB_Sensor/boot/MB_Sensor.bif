@@ -1,0 +1,7 @@
+/*MB_Sensor*/
+the_ROM_image:
+{
+  [bootloader]<MB_Sensor/boot/fsbl.elf>
+   <bitstream> 
+  <elf,microblaze_0>
+}

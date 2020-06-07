@@ -1,0 +1,21 @@
+06:01:00 **** Incremental Build of configuration Debug for project xiic_slave_example_1 ****
+make all 
+'Building file: ../src/xiic_slave_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xiic_slave_example.o" -IC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xiic_slave_example.d" -MT"src/xiic_slave_example.o" -o "src/xiic_slave_example.o" "../src/xiic_slave_example.c"
+'Finished building: ../src/xiic_slave_example.c'
+' '
+'Building target: xiic_slave_example_1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "xiic_slave_example_1.elf"  ./src/xiic_slave_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: xiic_slave_example_1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size xiic_slave_example_1.elf  |tee "xiic_slave_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14516	    832	   3420	  18768	   4950	xiic_slave_example_1.elf
+'Finished building: xiic_slave_example_1.elf.size'
+' '
+
+06:01:00 Build Finished (took 700ms)
+

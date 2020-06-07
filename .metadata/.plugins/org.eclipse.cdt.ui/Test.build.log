@@ -1,0 +1,34 @@
+14:24:25 **** Incremental Build of configuration Debug for project Test ****
+make all 
+'Building file: ../src/IMU_raw.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/IMU_raw.o" -IC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/IMU_raw.d" -MT"src/IMU_raw.o" -o "src/IMU_raw.o" "../src/IMU_raw.c"
+In file included from ../src/IMU_raw.c:12:
+../src/i2cCustom.h:217:12: warning: 'SetupInterruptSystem' declared 'static' but never defined [-Wunused-function]
+ static int SetupInterruptSystem(XIic *IicInstPtr);
+            ^~~~~~~~~~~~~~~~~~~~
+../src/i2cCustom.h:218:13: warning: 'SendHandler' declared 'static' but never defined [-Wunused-function]
+ static void SendHandler(XIic *InstancePtr);
+             ^~~~~~~~~~~
+../src/i2cCustom.h:219:13: warning: 'ReceiveHandler' declared 'static' but never defined [-Wunused-function]
+ static void ReceiveHandler(XIic *InstancePtr);
+             ^~~~~~~~~~~~~~
+../src/i2cCustom.h:220:13: warning: 'StatusHandler' declared 'static' but never defined [-Wunused-function]
+ static void StatusHandler(XIic *InstancePtr, int Event);
+             ^~~~~~~~~~~~~
+'Finished building: ../src/IMU_raw.c'
+' '
+'Building target: Test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Test.elf"  ./src/IMU_raw.o ./src/i2cCustom.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Test.elf  |tee "Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19176	    832	   3368	  23376	   5b50	Test.elf
+'Finished building: Test.elf.size'
+' '
+
+14:24:28 Build Finished (took 2s.178ms)
+

@@ -1,0 +1,34 @@
+23:47:53 **** Incremental Build of configuration Debug for project Test2 ****
+make all 
+'Building file: ../src/pre_configure_mpu.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pre_configure_mpu.o" -IC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/pre_configure_mpu.d" -MT"src/pre_configure_mpu.o" -o "src/pre_configure_mpu.o" "../src/pre_configure_mpu.c"
+In file included from ../src/pre_configure_mpu.c:12:
+../src/i2cCustom.h:217:12: warning: 'SetupInterruptSystem' declared 'static' but never defined [-Wunused-function]
+ static int SetupInterruptSystem(XIic *IicInstPtr);
+            ^~~~~~~~~~~~~~~~~~~~
+../src/i2cCustom.h:218:13: warning: 'SendHandler' declared 'static' but never defined [-Wunused-function]
+ static void SendHandler(XIic *InstancePtr);
+             ^~~~~~~~~~~
+../src/i2cCustom.h:219:13: warning: 'ReceiveHandler' declared 'static' but never defined [-Wunused-function]
+ static void ReceiveHandler(XIic *InstancePtr);
+             ^~~~~~~~~~~~~~
+../src/i2cCustom.h:220:13: warning: 'StatusHandler' declared 'static' but never defined [-Wunused-function]
+ static void StatusHandler(XIic *InstancePtr, int Event);
+             ^~~~~~~~~~~~~
+'Finished building: ../src/pre_configure_mpu.c'
+' '
+'Building target: Test2.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Test2.elf"  ./src/i2cCustom.o ./src/pre_configure_mpu.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Test2.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Test2.elf  |tee "Test2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18156	    832	   3372	  22360	   5758	Test2.elf
+'Finished building: Test2.elf.size'
+' '
+
+23:47:54 Build Finished (took 911ms)
+

@@ -1,0 +1,32 @@
+15:42:02 **** Incremental Build of configuration Debug for project IMU ****
+make all 
+'Building file: ../src/test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test.o" -IC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/test.d" -MT"src/test.o" -o "src/test.o" "../src/test.c"
+../src/test.c: In function 'main':
+../src/test.c:225:24: warning: passing argument 1 of 'xil_printf' makes pointer from integer without a cast [-Wint-conversion]
+   xil_printf(ReadBuffer[0]);
+              ~~~~~~~~~~^~~
+In file included from C:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bspinclude/include/xil_io.h:59,
+                 from C:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bspinclude/include/xiic_l.h:95,
+                 from C:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bspinclude/include/xiic.h:322,
+                 from ../src/test.c:77:
+C:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bspinclude/include/xil_printf.h:39:31: note: expected 'const char8 *' {aka 'const char *'} but argument is of type 'u8' {aka 'unsigned char'}
+ void xil_printf( const char8 *ctrl1, ...);
+                  ~~~~~~~~~~~~~^~~~~
+'Finished building: ../src/test.c'
+' '
+'Building target: IMU.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "IMU.elf"  ./src/test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: IMU.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size IMU.elf  |tee "IMU.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  16220	    812	   3376	  20408	   4fb8	IMU.elf
+'Finished building: IMU.elf.size'
+' '
+
+15:42:03 Build Finished (took 564ms)
+

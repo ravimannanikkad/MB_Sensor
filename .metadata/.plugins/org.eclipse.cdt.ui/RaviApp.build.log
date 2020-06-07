@@ -1,0 +1,75 @@
+13:09:04 **** Incremental Build of configuration Debug for project RaviApp ****
+make all 
+'Building file: ../src/IMU_raw.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/IMU_raw.o" -IC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/IMU_raw.d" -MT"src/IMU_raw.o" -o "src/IMU_raw.o" "../src/IMU_raw.c"
+In file included from ../src/IMU_raw.c:10:
+../src/i2cCustom.h:217:12: warning: 'SetupInterruptSystem' declared 'static' but never defined [-Wunused-function]
+ static int SetupInterruptSystem(XIic *IicInstPtr);
+            ^~~~~~~~~~~~~~~~~~~~
+../src/i2cCustom.h:218:13: warning: 'SendHandler' declared 'static' but never defined [-Wunused-function]
+ static void SendHandler(XIic *InstancePtr);
+             ^~~~~~~~~~~
+../src/i2cCustom.h:219:13: warning: 'ReceiveHandler' declared 'static' but never defined [-Wunused-function]
+ static void ReceiveHandler(XIic *InstancePtr);
+             ^~~~~~~~~~~~~~
+../src/i2cCustom.h:220:13: warning: 'StatusHandler' declared 'static' but never defined [-Wunused-function]
+ static void StatusHandler(XIic *InstancePtr, int Event);
+             ^~~~~~~~~~~~~
+'Finished building: ../src/IMU_raw.c'
+' '
+'Building file: ../src/i2cCustom.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2cCustom.o" -IC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2cCustom.d" -MT"src/i2cCustom.o" -o "src/i2cCustom.o" "../src/i2cCustom.c"
+../src/i2cCustom.c: In function 'config_mpu':
+../src/i2cCustom.c:8:10: warning: implicit declaration of function 'writeReg'; did you mean 'DynWriteReg'? [-Wimplicit-function-declaration]
+   Status=writeReg(MPUREG_PWR_MGMT_1,0x80);
+          ^~~~~~~~
+          DynWriteReg
+'Finished building: ../src/i2cCustom.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -IC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: RaviApp.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "RaviApp.elf"  ./src/IMU_raw.o ./src/i2cCustom.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ./src/IMU_raw.o: in function `readAx':
+C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/IMU_raw.c:104: undefined reference to `DynReadReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/IMU_raw.c:105: undefined reference to `DynReadReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ./src/IMU_raw.o: in function `readAy':
+C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/IMU_raw.c:118: undefined reference to `DynReadReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/IMU_raw.c:119: undefined reference to `DynReadReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ./src/IMU_raw.o: in function `readAz':
+C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/IMU_raw.c:131: undefined reference to `DynReadReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ./src/IMU_raw.o:C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/IMU_raw.c:132: more undefined references to `DynReadReg' follow
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ./src/i2cCustom.o: in function `config_mpu':
+C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:8: undefined reference to `writeReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:14: undefined reference to `DynReadReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:17: undefined reference to `writeReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:22: undefined reference to `DynReadReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:26: undefined reference to `writeReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:31: undefined reference to `DynReadReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:35: undefined reference to `writeReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:40: undefined reference to `DynReadReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:43: undefined reference to `writeReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:48: undefined reference to `DynReadReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:52: undefined reference to `writeReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:57: undefined reference to `DynReadReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:61: undefined reference to `writeReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:66: undefined reference to `DynReadReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:70: undefined reference to `writeReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:75: undefined reference to `DynReadReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:79: undefined reference to `writeReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:84: undefined reference to `DynReadReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:88: undefined reference to `writeReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:93: undefined reference to `DynReadReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:97: undefined reference to `writeReg'
+c:/xilinx/vitis/2019.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: C:\Users\ravim\OneDrive\Desktop\Vitis\RaviApp\Debug/../src/i2cCustom.c:102: undefined reference to `DynReadReg'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: RaviApp.elf] Error 1
+
+13:09:05 Build Finished (took 1s.198ms)
+

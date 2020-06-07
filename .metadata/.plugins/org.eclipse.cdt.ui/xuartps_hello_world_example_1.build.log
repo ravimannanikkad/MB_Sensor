@@ -1,0 +1,21 @@
+20:27:56 **** Build of configuration Debug for project xuartps_hello_world_example_1 ****
+make all 
+'Building file: ../src/xuartps_hello_world_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartps_hello_world_example.o" -IC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartps_hello_world_example.d" -MT"src/xuartps_hello_world_example.o" -o "src/xuartps_hello_world_example.o" "../src/xuartps_hello_world_example.c"
+'Finished building: ../src/xuartps_hello_world_example.c'
+' '
+'Building target: xuartps_hello_world_example_1.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/ravim/OneDrive/Desktop/Vitis/MB_Sys/export/MB_Sys/sw/MB_Sys/standalone_domain/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "xuartps_hello_world_example_1.elf"  ./src/xuartps_hello_world_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: xuartps_hello_world_example_1.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size xuartps_hello_world_example_1.elf  |tee "xuartps_hello_world_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8776	    776	   3184	  12736	   31c0	xuartps_hello_world_example_1.elf
+'Finished building: xuartps_hello_world_example_1.elf.size'
+' '
+
+20:27:58 Build Finished (took 1s.712ms)
+
